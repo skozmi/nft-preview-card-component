@@ -1,13 +1,13 @@
 body {
     font-family: 'Outfit', sans-serif;
     background: hsl(217, 54%, 11%);
-    text-align: center;
     font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: hsl(0, 0%, 100%);
     font-weight: 600;
+    font-size: inherit;
 }
 
 p {
@@ -34,20 +34,45 @@ main, footer {
     background-color: hsl(216, 50%, 16%);
 }
 
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.icons-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-img-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.avatarImg {
+    width: 10%;
+}
+
+.avatarTxt {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center;
     color: hsl(215, 51%, 70%);
 }
 
-.card-img-text {
-    display: flex;
-    justify-content: flex-start;
-}
-
 /*paragraph*/
 .etherum-text {
     color: hsl(178, 100%, 50%);
+}
+
+span {
+    color:hsl(0, 0%, 100%);
 }
 
 /*links*/
@@ -57,5 +82,65 @@ main, footer {
 
 /*images and icons*/
 .avatar-img {
-    width: 20%;
+    width: 100%;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+/*add hover effect*/
+.image-div:hover {
+    background:hsl(178, 100%, 50%);
+    background-image: url("/images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#equilImg:hover {
+    opacity: 0.4;
+}
+
+#viewIcon:hover {
+    opacity: 1;
+}
+
+h1:hover, span:hover {
+    color:hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+/*responsive effect*/
+@media (max-width:1028px) {
+    main, footer {
+        width: 60%;
+    }
+}
+
+@media (max-width:800px) {
+    main, footer {
+        width: 80%;
+    }
+
+    .card {
+        margin: 10%;
+    }
+}
+
+@media (max-width:600px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 14px;
+    }
+
+    main, footer {
+        width: 100%;
+    }
+
+    .card {
+        margin: 5%;
+    }
+
 }
